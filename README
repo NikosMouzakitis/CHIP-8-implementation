@@ -1,0 +1,11 @@
+A CHIP-8 emulator,implementing the 
+basic COSMAC-VIP instruction set.
+
+Written in C,using SDL library for 
+the graphical environment.
+
+Usage: 
+
+prompt >>  ./a.out  [ROM FILE_name]
+
+Crete,2017.
