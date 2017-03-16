@@ -267,17 +267,6 @@ void system_initialization(struct syst *s)
 //	printf("[registers]:Initialized............>OK\n");
 }
 
-void load_on_memory(unsigned char *buffer,unsigned char *memory,int fsize)
-{
-	int i,j;
-	printf("[LOAD ON MEMORY FUNCTION] fsize: %d\n",fsize);	
-	for(i = 0,j=512; i < fsize; i++)	// in memory we do not store the spaces or new lince characters.
-		if( (buffer[i] != ' ') && (buffer[i] != '\n') )		
-			memory[j++] = buffer[i];
-	chip.Wmem = j;		//saving value in Wmem.
-}
-
-
 uint32_t cpu_timerinterrupt(uint32_t interval,void *parameter)
 {
 	decrement_timers = TRUE;
